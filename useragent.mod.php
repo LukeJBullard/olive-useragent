@@ -19,7 +19,7 @@
         public function __construct()
         {
             //require in the user agent library source file
-            require_once(dirname(__FILE__) . "/UserAgentParser.php");
+            require_once(dirname(__FILE__) . "/thirdparty/UserAgentParser.php");
         }
         
         //parse user agent function wrapper
