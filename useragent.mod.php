@@ -18,8 +18,8 @@
         //constructor
         public function __construct()
         {
-            //require in the user agent library composer autoloader
-            require_once(dirname(__FILE__) . "/vendor/autoload.php");
+            //require in the user agent library from the oliveweb installation's composer vendor directory
+            require_once($_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']) . "/vendor/donatj/phpuseragentparser/src/UserAgentParser.php");
         }
         
         //parse user agent function wrapper
@@ -30,7 +30,7 @@
          */
         function userAgentData($a_uagent = null)
         {
-            return \donatj\UserAgent\parse_user_agent($a_uagent);
+            return parse_user_agent($a_uagent);//\donatj\UserAgent\parse_user_agent($a_uagent);
         }
     }
 ?>
