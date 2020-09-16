@@ -30,7 +30,7 @@
          */
         function userAgentData($a_uagent = null)
         {
-            return parse_user_agent($a_uagent);//\donatj\UserAgent\parse_user_agent($a_uagent);
+            return \donatj\UserAgent\parse_user_agent($a_uagent);
         }
     }
 ?>
