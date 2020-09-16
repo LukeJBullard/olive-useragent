@@ -18,8 +18,8 @@
         //constructor
         public function __construct()
         {
-            //require in the user agent library source file
-            require_once(dirname(__FILE__) . "/thirdparty/UserAgentParser.php");
+            //require in the user agent library composer autoloader
+            require_once(dirname(__FILE__) . "/vendor/autoload.php");
         }
         
         //parse user agent function wrapper
@@ -30,7 +30,7 @@
          */
         function userAgentData($a_uagent = null)
         {
-            return parse_user_agent($a_uagent);
+            return \donatj\UserAgent\parse_user_agent($a_uagent);
         }
     }
 ?>
